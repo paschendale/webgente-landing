@@ -10,6 +10,9 @@ app.get("/",(req,res) => {
     res.render("index");
 });
 
+app.get("/teste",(req,res) => {
+    res.render("teste");
+});
 
 
 app.listen(3000,() => {console.log("Landing page do WebGENTE rodando na porta 3000");});
