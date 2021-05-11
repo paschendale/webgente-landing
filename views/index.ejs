@@ -2,21 +2,51 @@
 
 <body>
     <%- include ("partials/navbar.ejs"); %>
-    
-
-    <div id="webgente">
-
+    <div id="map-tutorial-container" class="container-fluid">
+        <nav id="navbar-webgente" class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="/"><img src="img/webgente-fundo-escuro-120x40.png" alt=""></a>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> </ul>
+                <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModalLong" ><span class="far fa-question-circle"></span></button>
+                &nbsp;
+                <button class="btn btn-secondary btn-sm" type="button" id="enviar" ><span class="fas fa-user-lock"></span></button>
+            </div>
+        </nav>
+        <div id="map">
+            <div id="search" class="container col-3 col-sm-4 col-lg-4 leaflet-top leaflet-left webgente-search-container"></div>
+            <div id='webgente-legend-container' class='leaflet-bottom leaflet-right webgente-legend-container shadow p-3'></div>
+            <div id='webgente-coordinates-panel' class="webgente-coordinates-panel leaflet-bottom leaflet-left">
+                <div id='webgente-coordinates-container' class="webgente-coordinates-container"></div>
+            </div>
+        </div>
     </div>
-    
     <div id="showroom">
+        Orci et fames arcu diam libero, est duis libero odio at torquent. Ultricies ridiculus tristique aptent condimentum gravida metus eget ipsum vehicula mattis sit. Duis neque litora dolor dui. Facilisi augue commodo pellentesque consectetur sollicitudin facilisi non rutrum sodales. Cursus nulla consequat pretium, ridiculus accumsan cubilia. Eros cubilia aenean aliquet, parturient augue! Cum tortor potenti pulvinar.
 
+        Maecenas ipsum vitae libero nascetur pharetra integer arcu ligula. Nibh habitasse gravida pretium. Arcu vel id rutrum placerat ipsum eros. Donec eros venenatis libero! Non risus donec venenatis tincidunt ultricies arcu. Ullamcorper diam suspendisse proin nam vestibulum facilisis. Consequat senectus quam elementum. Hac tortor litora in et nulla ultricies ullamcorper sem? Feugiat consectetur nullam nam. Rutrum sagittis potenti augue mollis quis lobortis cras eleifend. Nascetur massa curabitur himenaeos tempus orci tempor dictum nullam lacus. Lorem tempor pulvinar dui sociosqu tempus consequat nisi lacus dapibus.
+        
+        Curae;, tempus odio a. Quam aenean praesent dictum dictumst sagittis lorem taciti hac fermentum nulla porta interdum. Fringilla, a dignissim nulla! Netus montes dapibus id eleifend class est rhoncus consequat. Egestas potenti curae; maecenas in accumsan neque enim porttitor. Nisi placerat semper ad euismod tincidunt et pharetra mauris. Placerat mi nascetur mollis ornare facilisi vehicula ante etiam penatibus quis. Dictum leo quis et metus inceptos potenti morbi.
+        
+        Nulla in duis pellentesque porttitor libero metus parturient taciti nisl at. Et erat scelerisque fermentum feugiat. Rutrum at a eros donec dis in ac. Elementum praesent facilisis enim fermentum lectus consequat nullam. Sollicitudin donec gravida scelerisque condimentum morbi nunc tortor suspendisse inceptos? Libero enim, porta augue gravida ultrices quisque. Fusce venenatis tincidunt ante ut porta dui morbi placerat per mollis. Iaculis cras iaculis fusce volutpat nullam feugiat.
+        
+        Tempor cras ad, lacinia praesent torquent tortor consectetur arcu porta fringilla. Massa nulla aliquet pharetra himenaeos pulvinar massa enim. Convallis pharetra feugiat mi arcu commodo pretium praesent neque feugiat viverra? Id dapibus bibendum vulputate fermentum cubilia curae; lacinia at purus diam. Conubia platea vitae magnis ut enim blandit justo euismod tempus dictumst. Torquent urna nunc augue phasellus, praesent libero magnis aenean! Torquent elementum ipsum luctus parturient magnis mauris nulla hac tincidunt phasellus nullam? Diam pellentesque dui nullam curae;? Diam potenti adipiscing eget ultrices montes, viverra penatibus ut class nisi?
+        
     </div>
-
     <div id="documentacao">
+        Orci et fames arcu diam libero, est duis libero odio at torquent. Ultricies ridiculus tristique aptent condimentum gravida metus eget ipsum vehicula mattis sit. Duis neque litora dolor dui. Facilisi augue commodo pellentesque consectetur sollicitudin facilisi non rutrum sodales. Cursus nulla consequat pretium, ridiculus accumsan cubilia. Eros cubilia aenean aliquet, parturient augue! Cum tortor potenti pulvinar.
 
+        Maecenas ipsum vitae libero nascetur pharetra integer arcu ligula. Nibh habitasse gravida pretium. Arcu vel id rutrum placerat ipsum eros. Donec eros venenatis libero! Non risus donec venenatis tincidunt ultricies arcu. Ullamcorper diam suspendisse proin nam vestibulum facilisis. Consequat senectus quam elementum. Hac tortor litora in et nulla ultricies ullamcorper sem? Feugiat consectetur nullam nam. Rutrum sagittis potenti augue mollis quis lobortis cras eleifend. Nascetur massa curabitur himenaeos tempus orci tempor dictum nullam lacus. Lorem tempor pulvinar dui sociosqu tempus consequat nisi lacus dapibus.
+        
+        Curae;, tempus odio a. Quam aenean praesent dictum dictumst sagittis lorem taciti hac fermentum nulla porta interdum. Fringilla, a dignissim nulla! Netus montes dapibus id eleifend class est rhoncus consequat. Egestas potenti curae; maecenas in accumsan neque enim porttitor. Nisi placerat semper ad euismod tincidunt et pharetra mauris. Placerat mi nascetur mollis ornare facilisi vehicula ante etiam penatibus quis. Dictum leo quis et metus inceptos potenti morbi.
+        
+        Nulla in duis pellentesque porttitor libero metus parturient taciti nisl at. Et erat scelerisque fermentum feugiat. Rutrum at a eros donec dis in ac. Elementum praesent facilisis enim fermentum lectus consequat nullam. Sollicitudin donec gravida scelerisque condimentum morbi nunc tortor suspendisse inceptos? Libero enim, porta augue gravida ultrices quisque. Fusce venenatis tincidunt ante ut porta dui morbi placerat per mollis. Iaculis cras iaculis fusce volutpat nullam feugiat.
+        
+        Tempor cras ad, lacinia praesent torquent tortor consectetur arcu porta fringilla. Massa nulla aliquet pharetra himenaeos pulvinar massa enim. Convallis pharetra feugiat mi arcu commodo pretium praesent neque feugiat viverra? Id dapibus bibendum vulputate fermentum cubilia curae; lacinia at purus diam. Conubia platea vitae magnis ut enim blandit justo euismod tempus dictumst. Torquent urna nunc augue phasellus, praesent libero magnis aenean! Torquent elementum ipsum luctus parturient magnis mauris nulla hac tincidunt phasellus nullam? Diam pellentesque dui nullam curae;? Diam potenti adipiscing eget ultrices montes, viverra penatibus ut class nisi?
+        
     </div>
-
-
 </body>
 
 <%- include ("partials/footer.ejs"); %>
