@@ -1,0 +1,139 @@
+/*Folha de estilo do site */
+
+/* Extra small devices (portrait phones, less than 576px)*/
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+   
+
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+  
+
+
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+    
+ }
+
+
+ /*IMPORTANDO FONTE MONTSERRAT*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;1,200;1,300;1,400;1,500;1,800&display=swap');
+
+
+
+/*Definindo fontes */
+
+p {
+   font-family: 'Montserrat', sans-serif;
+   font-size: 1.1em;
+   font-weight: 300;
+   line-height: 1.7em;
+   color: black;
+}
+
+
+h1 {
+
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 600;
+   line-height: 1.7em;
+   color: black;
+
+}
+
+h2 {
+
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 500;
+   line-height: 1.5em;
+   color: black;
+}
+
+h3 {
+
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 400;
+   line-height: 1em;
+   color: black;
+
+}
+
+h4 {
+
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 300;
+   line-height: 0.8em;
+   color: black;
+
+}
+
+h5 {
+
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 200;
+   line-height: 0.5em;
+   color: rgb(0, 0, 0);
+
+}
+
+a {
+
+   font-family: 'Montserrat', sans-serif;
+
+}
+
+
+ /* Barra de navegação */
+
+ .navbar {
+   position: relative;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -ms-flex-align: center;
+   align-items: center;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+   padding: 0.5rem 1rem;
+   
+}
+
+ .navpadding {
+    padding: 5px 20px;
+ }
+
+
+ .pointer {
+   cursor: pointer;
+}
+
+
+.cordefundo {
+   background-color: black;
+}
+
+.divisor {
+
+   width: 1px;
+   background: white;
+   margin: 12px 15px;
+   }
+
+
+
+
