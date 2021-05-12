@@ -177,10 +177,6 @@ hr {
 	border-radius: 2px;
 }
 
-#map-tutorial-container {
-   padding-top: 65px;
-}
-
 /* Elementos do GetFeatureInfo */ 
 .popup-inner-div {
    width: 270px;

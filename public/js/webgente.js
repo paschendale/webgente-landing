@@ -14,10 +14,10 @@ var map = L.map('map', {
 });
 
 /* dando resize no mapa pra ficar abaixo da navbar */
-$('#map').height(window.innerHeight-65-document.getElementById('navbar-webgente').clientHeight)
+$('#map').height(window.innerHeight-document.getElementById('navbar-website').clientHeight-document.getElementById('navbar-webgente').clientHeight)
 
 window.onresize = function() {
-    $('#map').height(window.innerHeight-65-document.getElementById('navbar-webgente').clientHeight) 
+    $('#map').height(window.innerHeight-document.getElementById('navbar-website').clientHeight-document.getElementById('navbar-webgente').clientHeight) 
     map.fitBounds(boundsToShow);
 }
 
