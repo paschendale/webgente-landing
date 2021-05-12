@@ -1,5 +1,11 @@
 /*Folha de estilo do site */
 
+html, body {
+   height: 100%;
+   margin: 0;
+   background-color: black;
+}
+
 /* Extra small devices (portrait phones, less than 576px)*/
 /* No media query for `xs` since this is the default in Bootstrap */
 
@@ -135,9 +141,8 @@ a {
 
 /* CSS do WebGENTE */
 
-html, body {
-   height: 100%;
-   margin: 0;
+hr {
+   color: blanchedalmond;
 }
 
 #map {
@@ -215,4 +220,35 @@ th {
    width: 270px; /* Setar mesma width de .popup-inner-div */
    height:200px;
    border:none;
+}
+
+/* Estilo da parte de showroom */
+
+#showroom {
+   height: 100vh;
+   padding-top: 65px;
+   color: blanchedalmond;
+}
+
+/* Estilo da parte de documentação */
+
+#documentacao {
+   height: 100vh;
+   padding-top: 65px;
+   color: blanchedalmond;
+}
+
+.btn-doc {
+   height: 100px;
+   width: 100px;
+}
+
+/* Estilo do Modal de Documentação */
+
+.modal-content {
+   background-color: black;
+}
+
+iframe {
+   border-color: black;
 }
