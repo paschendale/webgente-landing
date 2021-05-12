@@ -13,10 +13,11 @@ var map = L.map('map', {
     scrollWheelZoom: false
 });
 
-$('#map').height(window.innerHeight-70-document.getElementById('navbar-webgente').clientHeight)
+/* dando resize no mapa pra ficar abaixo da navbar */
+$('#map').height(window.innerHeight-65-document.getElementById('navbar-webgente').clientHeight)
 
 window.onresize = function() {
-    $('#map').height(window.innerHeight-70-document.getElementById('navbar-webgente').clientHeight) 
+    $('#map').height(window.innerHeight-65-document.getElementById('navbar-webgente').clientHeight) 
     map.fitBounds(boundsToShow);
 }
 
