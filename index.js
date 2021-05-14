@@ -14,6 +14,10 @@ app.get("/teste",(req,res) => {
     res.render("teste");
 });
 
+app.get("/teste2",(req,res) => {
+    res.render("teste2");
+});
+
 
 app.listen(3000,() => {console.log("Landing page do WebGENTE rodando na porta 3000");});
 
