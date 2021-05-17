@@ -328,21 +328,21 @@ th {
    position: relative;
    left:0;
    height:100%;
-   background-color: black;
+   background-color: #761616;
 }
 
 .box2 {
    position:absolute;
    left:0;
    height:100%;
-   background-color: black;
+   background-color: #0b9ac2;
 }
 
 .box3 {
    position:absolute;
    left:0;
    height:100%;
-   background-color: black;
+   background-color: #ad8c56;
 }
 
 
@@ -361,32 +361,128 @@ body > div {
 
 /*CSS das imagens do showroom*/
 
-#viçosaimg {
+.gianettiimg {
 
-   width: 50%;
+   width: 25%;
    position: inherit;
-   margin-top: 10%;
+   margin-top: 15%;
 
 }
 
-#cmdimg {
 
-   width: 50%;
+.cmdimg {
+
+   width: 25%;
    position: inherit;
-   margin-top: 10%;
-
-
-}
-
-#bdimg {
-
-   width: 50%;
-   position: inherit;
-   margin-top: 10%;
+   margin-top: 15%;
 
 
 }
 
+.bdimg {
+
+   width: 25%;
+   position: inherit;
+   margin-top: 15%;
+
+
+}
+
+.girarimg {
+
+   width: 30%;
+   position: inherit;
+   margin-top: -24%;
+
+}
+
+@keyframes spinning {
+   0% {
+      transform: rotate(0);
+   }
+
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+.girarimg.is-animating {
+   animation: spinning 30s linear infinite;
+}
+
+/* Responsividade das imagens do showroom*/
+
+
+/*Telas até 768px*/
+@media (max-width: 768px) {
+   .gianettiimg {
+
+      width: 45%;
+      position: inherit;
+      margin-top: 30%;
+   
+   }
+
+   .cmdimg {
+
+      width: 45%;
+      position: inherit;
+      margin-top: 30%;
+   
+   }
+
+   .bdimg {
+
+      width: 45%;
+      position: inherit;
+      margin-top: 30%;
+   
+   }
+
+
+   .girarimg {
+
+      width: 60%;
+      position: inherit;
+      margin-top: -45%;
+   
+   }
+}
+
+/*Telas até 375px*/
+@media (max-width: 375px) {
+   .gianettiimg {
+
+      width: 60%;
+      position: inherit;
+      margin-top: 50%;
+   
+   }
+
+   .cmdimg {
+
+      width: 60%;
+      position: inherit;
+      margin-top: 50%;
+   
+   }
+
+   .bdimg {
+
+      width: 60%;
+      position: inherit;
+      margin-top: 50%;
+   
+   }
+
+   .girarimg {
+
+      width: 75%;
+      position: inherit;
+      margin-top: -55%;
+   
+   }
+}
 
 
 /*------------------------------------------------*/
