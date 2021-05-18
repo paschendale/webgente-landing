@@ -14,10 +14,10 @@ var map = L.map('map', {
 });
 
 /* dando resize no mapa pra ficar abaixo da navbar */
-$('#map').height(window.innerHeight-document.getElementById('navbar-website').clientHeight-document.getElementById('navbar-webgente').clientHeight)
+$('#map').height(window.innerHeight-document.getElementById('navbar-webgente').clientHeight)
 
 window.onresize = function() {
-    $('#map').height(window.innerHeight-document.getElementById('navbar-website').clientHeight-document.getElementById('navbar-webgente').clientHeight) 
+    $('#map').height(window.innerHeight-document.getElementById('navbar-webgente').clientHeight) 
     map.fitBounds(boundsToShow);
 }
 
@@ -65,7 +65,7 @@ var fullTour = L.marker([2198, 1776]).addTo(map);
 // HTML do Popup
 
 popupHtml = '<div class="popup-inner-div"><p><a class="link-table-collapse" style="color:black;font-weight: bold;" data-toggle="collapse" href="#row-0">MUB_Lote: 01.01.0034.0077.000</a></p></div><div id="row-0" class="panel-collapse collapse"><div class="panel-body"><table><tbody><tr><th>Atributo</th><th>Valor</th></tr><tr><td>id</td><td>1429</td></tr><tr><td>inscricao</td><td>01.01.0034.0077.000</td></tr><tr><td>inscricao_lote</td><td>01.01.0034.0077</td></tr><tr><td>total_unidades_lote</td><td>1</td></tr><tr><td>area_total_construida</td><td>396.2607708985073</td></tr><tr><td>testada_1</td><td>15.41</td></tr><tr><td>testada_2</td><td>0</td></tr><tr><td>cod_test_2</td><td>0</td></tr><tr><td>sec_test_2</td><td>0</td></tr><tr><td>testada_3</td><td>0</td></tr><tr><td>cod_test_3</td><td>0</td></tr><tr><td>sec_test_3</td><td>0</td></tr><tr><td>testada_4</td><td>0</td></tr><tr><td>cod_test_4</td><td>0</td></tr><tr><td>sec_test_4</td><td>0</td></tr><tr><td>area_construida_unidade</td><td>396.2607708985073</td></tr></tbody></table></div></div><div class="popup-inner-div"><p><a class="link-table-collapse" style="color:black;font-weight: bold;" data-toggle="collapse" href="#row-1">CAD_Quadra: 01.01.0034</a></p></div><div id="row-1" class="panel-collapse collapse"><div class="panel-body"><table><tbody><tr><th>Atributo</th><th>Valor</th></tr><tr><td>id</td><td>34</td></tr><tr><td>distrito</td><td>1</td></tr><tr><td>setor</td><td>1</td></tr><tr><td>quadra</td><td>34</td></tr></tbody></table></div></div><div class="popup-inner-div"><p><a class="link-table-collapse" style="color:black;font-weight: bold;" data-toggle="collapse" href="#row-2">EDF_Edificacao: 01.01.0034.0077.000</a></p></div><div id="row-2" class="panel-collapse collapse"><div class="panel-body"><table><tbody><tr><th>Atributo</th><th>Valor</th></tr><tr><td>id</td><td>6414</td></tr><tr><td>inscricao</td><td>01.01.0034.0077.000</td></tr><tr><td>area_construida</td><td>396.26</td></tr></tbody></table></div></div>'
-var featuresInfo = L.marker([2090, 2400]).addTo(map).bindPopup(popupHtml);
+var featuresInfo = L.marker([2090, 2300]).addTo(map).bindPopup(popupHtml);
 
 if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     // do nothing
