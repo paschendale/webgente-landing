@@ -2,62 +2,67 @@
 
 <body>
 
+    <!-- NAVBAR -->
+
+    <div id="navbar-webgente">
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbarwebgente fixed-top">
+
+      <!-- Logo do webgente -->
+      <a class="navbar-brand" href="/"><img src="img/webgente-fundo-escuro-120x40.png" alt=""></a>
+      
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars text-light"></i>
+      </button>
+
+      <!-- Menu de navegação -->
+      <div class="collapse navbar-collapse ulpadding" id="navbarNav">
+
+          <ul class="navbar-nav" style="margin:auto;">
+
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#webgente"> WebGENTE <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item divisor"></li>
+
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#showroom"> Showroom </a>
+            </li>
+
+            <li class="nav-item divisor"></li>
+
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#documentacao"> Documentação </a>
+            </li>
+
+
+          </ul>
+
+      </div>
+
+          <!-- Botões -->
+          <!-- Apenas em telas menores -->
+      <div class="ml-auto">
+          <button type="button" class="btn btn-secondary btn-sm btnnav2" data-toggle="modal" data-target="#exampleModalLong" ><span class="far fa-question-circle"></span></button>
+          &nbsp;
+          <button class="btn btn-secondary btn-sm btnnav2" type="button" id="enviar" ><span class="fas fa-user-lock"></span></button>
+      </div>
+
+
+    </nav>
+
+    </div>
+
+    <!-- FIM DA NAVBAR -->
+
+
+
+
+
+
     <!-- PÁGINA DO WEBGENTE -->
-    <div id="webgente" data-0="transform:translate(0,0%);" data-100p="transform:translate(0,-100%);" style="top: auto;" data-target="#webgente">
-
-
-        <nav id="navbar-webgente" class="navbar-dark cordefundo2 navbarwebgente">
-
-            <!-- 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            -->
-
-            <a class="navbar-brand" href="/"><img src="img/webgente-fundo-escuro-120x40.png" alt=""></a>
-
-            <div class="navpadding">
-
-                <ul class="nav justify-content-center">
-          
-                  <li class="nav-item">
-                    <a class="nav-link text-light" href="#webgente"> WebGENTE <span class="sr-only">(current)</span></a>
-                  </li>
-          
-                  <li class="nav-item divisor"></li>
-          
-                  <li class="nav-item">
-                    <a class="nav-link text-light" href="#showroom"> Showroom </a>
-                  </li>
-          
-                  <li class="nav-item divisor"></li>
-          
-                  <li class="nav-item">
-                    <a class="nav-link text-light" href="#documentacao"> Documentação </a>
-                  </li>
-          
-          
-                </ul>
-          
-            </div>
-
-                <!-- Apenas em telas maiores -->
-                <div class="showbtn2 ml-auto">
-                    <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModalLong" ><span class="far fa-question-circle"></span></button>
-                    &nbsp;
-                    <button class="btn btn-secondary btn-sm " type="button" id="enviar" ><span class="fas fa-user-lock"></span></button>
-                </div>
-
-                <div class="showbtn1">
-                    <!-- Apenas em telas menores -->
-                    <button type="button" class="btn btn-secondary btn-sm " data-toggle="modal" data-target="#exampleModalLong" ><span class="far fa-question-circle"></span></button>
-                    &nbsp;
-                    <button class="btn btn-secondary btn-sm" type="button" id="enviar" ><span class="fas fa-user-lock"></span></button>
-                </div>
-
-
-        </nav>
-
+    <div id="webgente">
 
         <div id="map">
             <div id="search" class="container col-3 col-sm-4 col-lg-4 leaflet-top leaflet-left webgente-search-container"></div>
@@ -66,65 +71,105 @@
                 <div id='webgente-coordinates-container' class="webgente-coordinates-container"></div>
             </div>
         </div>
+
+
     </div>
+    <!-- FIM DA PÁGINA DO WEBGENTE -->
+
+
+
+
+
 
 
 
     <!-- PÁGINA DE SHOWROOM -->
 
-    
-    <div data-0="transform:translate(0,100%);" data-100p="transform:translate(0,0%)" data-_box-100p="" data-_box-200p="transform:translate(0,-100%)" data-target="#showroom">
+    <div id="showroom">
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
 
 
-        <div class="box1" data-200p="width:100%;" data-_box-0p="width:100%">
-            <div class="container-fluid">  
-                <center><img src="/img/sroom/gianetti.png" class="gianettiimg"></img></center> 
-                <center><img src="/img/sroom/girar.png" class="girarimg is-animating"></img></center>  
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+        </ol>
+
+
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="background-color:#761616;">
+            <div>
+              <center><a href="https://webgente.bomdespacho.mg.gov.br/"><img src="/img/sroom/bd.png" class="img1"></a></center>
+              <center><img src="/img/sroom/girar.png" class="girarimg is-animating"></center>
+              <center><img src="/img/sroom/imglink.png" class="img2"></center>
             </div>
-        </div>
+          </div>
+        
+          <div class="carousel-item" style="background-color: #108F8A">
+            <div>
+              <center><a href="http://webgente.jacobina.genteufv.com.br/"><img src="/img/sroom/jacobina.png" class="img1"></a></center>
+              <center><img src="/img/sroom/girar.png" class="girarimg is-animating"></center>
+            </div>        
+          </div>
 
-    </div>
 
-    <div data-0="transform:translate(0,100%);" data-100p="transform:translate(0,0%)" data-_box-100p="" data-_box-200p="transform:translate(0,-100%)">
-
-
-        <div class="box2" data-100p="width:0%;" data-_box-40p="width:100%">
-            <div class="container-fluid"> 
-                <center><img src="/img/sroom/cmd.png" class="cmdimg"></img></center> 
-                <center><img src="/img/sroom/girar.png" class="girarimg is-animating"></img></center> 
+          <div class="carousel-item" style="background-color: #856A35">
+            <div>
+              <center><a href="https://webgente.cmd.genteufv.com.br/"><img src="/img/sroom/cmd.png" class="img1"></a></center>
+              <center><img src="/img/sroom/girar.png" class="girarimg is-animating"></center>
             </div>
-        </div>
+          </div>
 
-    </div>
-
-    <div data-0="transform:translate(0,100%);" data-100p="transform:translate(0,0%)" data-_box-100p="" data-_box-200p="transform:translate(0,-100%)">
-
-
-        <div class="box3" data-200p="width:0%;" data-_box-80p="width:100%">
-            <div class="container-fluid"> 
-                <center><img src="/img/sroom/bd.png" class="bdimg"></img></center> 
-                <center><img src="/img/sroom/girar.png" class="girarimg is-animating"></img></center> 
+          <div class="carousel-item" style="background-color: #4F8C14">
+            <div>
+              <center><a href="http://webgente.ufv.genteufv.com.br/"><img src="/img/sroom/ufv.png" class="img1"></a></center>
+              <center><img src="/img/sroom/girar.png" class="girarimg is-animating"></center>
             </div>
+          </div>
+
+          <div class="carousel-item" style="background-color: #433085">
+            <div>
+              <center><a><img src="/img/sroom/gianetti.png" class="img1"></a></center>
+              <center><img src="/img/sroom/girar.png" class="girarimg is-animating"></center>
+            </div>
+          </div>
+
+      
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
 
     </div>
 
     <!-- FIM DA PÁGINA DE SHOWROOM -->
 
 
+    
+
+
     <!-- PÁGINA DE DOCUMENTAÇÃO -->
     
-    <div data-100="transform:translate(0,100%);" data-400p="transform:translate(0,0%)" data-_box-100p="" data-_box-200p="transform:translate(0,0%);" data-target="documentacao">
+    <div id="documentacao">
 
 
         <div class="box4">
 
             <div class="row align-items-center">
                 <div class="col align-items-center">
-                    <button class="btn btn-light btn-doc"><span class="fab fa-github"></span></button>
+                  <center><a><img src="/img/doc/git.png" id="img1"></a></center>
                 </div>
                 <div class="col align-items-center">
-                    <button class="btn btn-light btn-doc"><span class="fas fa-folder-open"></span></button>
+                  <center><a><img src="/img/doc/docs.png" id="img1"></a></center>
                 </div>
             </div>
 
@@ -134,6 +179,11 @@
 
     </div>
 
+    <!-- FIM DA PÁGINA DE DOCUMENTAÇÃO -->
+
+
+
+    
     
 </body>
 
