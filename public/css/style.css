@@ -100,21 +100,6 @@ a {
    
 }
 
-.navbarwebgente2 {
-
-   display: -ms-flexbox;
-   display: flex;
-   -ms-flex-wrap: wrap;
-   flex-wrap: wrap;
-   -ms-flex-align: center;
-   align-items: center;
-   -ms-flex-pack: justify;
-   background-color: red;
-   padding: 5px 15px;
-   justify-content: space-between;
-   
-}
-
 .navbar-toggler {
    padding: 8px 10px;
    font-size: 15px;
@@ -259,6 +244,10 @@ th {
 	left: 0;
 }
 
+/* apagar os tracinhos que indicam onde a posição do carousel */
+.carousel-indicators{
+	opacity: 0;
+}
 
 .carousel-item{
    height: 100vh;
@@ -324,13 +313,13 @@ th {
 }
 
 .girarimg.is-animating {
-   animation: spinning 60s linear infinite;
+   animation: spinning 30s linear infinite;
 
 }
 
 @media (max-width: 565px) {
 
-   .img1{
+   #img1{
       width: 60%;
       position:absolute;
       top:50%;
@@ -388,24 +377,3 @@ iframe {
    border-color: black;
 }
 
-
-#imgdoc{
-   
-   margin-top: 10%;
-   width: 70%;
-   top:50%;
-   left:50%;
-}
-
-@media (max-width: 565px) {
-
-   #imgdoc{
-      
-      margin-top: 70px;
-      width: 150px;
-      top:50%;
-      left:50%;
-   }
-   
-
-}
