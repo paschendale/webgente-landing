@@ -141,3 +141,13 @@ $('.leaflet-control-layers-toggle').click(() => {
     createVideoModal('Q3dvbM6Pias')
 });
 
+
+$(function() {
+    $(window).on("scroll", function() {
+        if ($(window).scrollTop > 100) {
+            $(".navbarwebgente").addClass("navbarwebgente2");
+        } else {
+            $(".navbarwebgente").removeClass("navbarwebgente2")
+        }
+    })
+})
