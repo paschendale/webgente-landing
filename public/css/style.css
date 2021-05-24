@@ -100,20 +100,6 @@ a {
    
 }
 
-.navbarwebgente2 {
-
-   display: -ms-flexbox;
-   display: flex;
-   -ms-flex-wrap: wrap;
-   flex-wrap: wrap;
-   -ms-flex-align: center;
-   align-items: center;
-   -ms-flex-pack: justify;
-   background-color: red;
-   padding: 5px 15px;
-   justify-content: space-between;
-   
-}
 
 .navbar-toggler {
    padding: 8px 10px;
@@ -125,7 +111,36 @@ a {
    margin: 0px 10px;
 }
 
+.ulpadding {
 
+   margin-left: auto;
+ }
+
+
+.divisor {
+
+   width: 1px;
+   background: white;
+   margin: 12px 2px;
+}
+
+
+
+@media (max-width: 992px) {
+
+   .navbar-dark .navbar-nav .nav-link {
+      
+      margin: 1px;
+  }
+
+   .divisor {
+
+      display: none;
+   }
+
+   
+
+}
 
 @media (max-width: 305px) {
 
@@ -152,18 +167,6 @@ a {
 }
 
 
- .ulpadding {
-
-   margin-left: auto;
- }
-
-
-.divisor {
-
-   width: 1px;
-   background: white;
-   margin: 12px 2px;
-}
 
 
 
