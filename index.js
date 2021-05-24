@@ -12,6 +12,7 @@ app.get("/",(req,res) => {
 
 
 
+
 app.listen(3000,() => {console.log("Landing page do WebGENTE rodando na porta 3000");});
 
 
