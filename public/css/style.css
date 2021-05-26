@@ -5,6 +5,7 @@ html, body {
    height: 100%;
    margin: 0;
    background-color: black;
+   scroll-behavior: smooth;
 }
 
 
@@ -179,6 +180,7 @@ a {
 #map {
    height: 100vh;
    margin-top: auto;
+   bottom: 0;
 }
 
 .webgente-coordinates-container {
@@ -257,11 +259,10 @@ th {
 .carousel-inner{ 
 	list-style: none; /* aqui tiro a opção de passar SLIDEs < >  */
 	position: relative!important;
-	z-index: 1;
+
 	top: 0;
 	left: 0;
 }
-
 
 .carousel-item{
    height: 100vh;
@@ -269,17 +270,16 @@ th {
    background-position: 50% 0;
 }
 
-.img1{
+.imagem-projeto{
    width: 30%;
    position:absolute;
    top:50%;
    left:50%;
    margin-top:-13.5%;
    margin-left:-15%;
-
 }
 
-.img2{
+.imagem-link{
    width: 30%;
    position:absolute;
    top:50%;
@@ -287,21 +287,15 @@ th {
    margin-top:-13.5%;
    margin-left:-15%;
    opacity: 0;
-
 }
 
-.img1:hover .img2 {
-   width: 30%;
-   position:absolute;
-   top:50%;
-   left:50%;
-   margin-top:-13.5%;
-   margin-left:-15%;
+.imagem-link:hover {
+   cursor: pointer;
+   /* Se eu quisesse fazer a transição com CSS eu poderia usar este snippet aqui
+   mas preferi usar jquery porque o mouseout fica mais bonito
    opacity: 1;
+   transition: 1s ease-in-out; */
 }
-
-
-
 
 .girarimg {
 
@@ -311,10 +305,7 @@ th {
    left:50%;
    margin-top:-16.25%;
    margin-left:-17.5%;
-
 }
-
-
 
 @keyframes spinning {
    0% {
@@ -333,7 +324,7 @@ th {
 
 @media (max-width: 565px) {
 
-   .img1{
+   .imagem-projeto{
       width: 60%;
       position:absolute;
       top:50%;
@@ -378,6 +369,15 @@ th {
    background-color: black;
    padding: 100px;
    color: blanchedalmond;
+}
+
+.doc-button {
+   transition: transform .5s;
+}
+
+.doc-button:hover {
+   cursor: pointer;
+   transform: scale(1.1);
 }
 
 

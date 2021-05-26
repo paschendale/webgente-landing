@@ -14,11 +14,13 @@ var map = L.map('map', {
 });
 
 /* dando resize no mapa pra ficar abaixo da navbar */
-$('#map').height(window.innerHeight-document.getElementById('navbar-webgente').clientHeight)
+$('#map').height(window.innerHeight-$('#navbar-webgente').height()-10)
+$('#webgente').css('margin-top',$('#navbar-webgente').height()+10)
 
 window.onresize = function() {
-    $('#map').height(window.innerHeight-document.getElementById('navbar-webgente').clientHeight) 
-    map.fitBounds(boundsToShow);
+    $('#map').height(window.innerHeight-$('#navbar-webgente').height()-10) ;
+    $('#webgente').css('margin-top',$('#navbar-webgente').height()+10);
+    map.fitBounds(boundsToShow);    
 }
 
 /* Adicionando escala gráfica ao mapa */

@@ -4,9 +4,9 @@
 
     <!-- NAVBAR -->
 
-    <div id="navbar-webgente">
+    <div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark navbarwebgente fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark navbarwebgente fixed-top" id="navbar-webgente">
 
       <!-- Logo do webgente -->
       <a class="navbar-brand" href="/"><img src="img/webgente-fundo-escuro-120x40.png" alt=""></a>
@@ -21,7 +21,7 @@
           <ul class="navbar-nav" style="margin:auto;">
 
             <li class="nav-item">
-              <a class="nav-link text-light" href="#webgente"> WebGENTE <span class="sr-only">(current)</span></a>
+              <a class="nav-link text-light" href="#top"> WebGENTE <span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item divisor"></li>
@@ -95,47 +95,64 @@
           <li data-target="#carouselSroom" data-slide-to="1"></li>
           <li data-target="#carouselSroom" data-slide-to="2"></li>
           <li data-target="#carouselSroom" data-slide-to="3"></li>
-          <li data-target="#carouselSroom" data-slide-to="4"></li>
+          <!--<li data-target="#carouselSroom" data-slide-to="4"></li>-->
         </ol>
 
+        <!-- TEMPLATE PARA ADIÇÃO DE NOVOS ITENS NO CAROUSEL
+
+          <div class="carousel-item active" style="background-color:#761616;">
+            <div class="container-imagem-projeto">
+              <center><img src=" ADICIONAR ENDEREÇO DA IMAGEM DO PROJETO " class="imagem-projeto"></center> 
+              <center><img src="/img/sroom/girar.png" class="girarimg is-animating"></center>
+              <center><img src="/img/sroom/imglink.png" data-url=" ADICIONAR LINK DO WEBGENTE " class="imagem-link"></center>
+            </div>
+          </div>
+
+        -->
 
         <div class="carousel-inner">
           <div class="carousel-item active" style="background-color:#761616;">
-            <div>
-              <center><a href="https://webgente.bomdespacho.mg.gov.br/"><img src="/img/sroom/bd.png" class="img1"></a></center>
+            <div class="container-imagem-projeto">
+              <center><img src="/img/sroom/bd.png" class="imagem-projeto"></center>
               <center><img src="/img/sroom/girar.png" class="girarimg is-animating"></center>
-              <center><img src="/img/sroom/imglink.png" class="img2"></center>
+              <center><img src="/img/sroom/imglink.png" data-url="https://webgente.bomdespacho.mg.gov.br" class="imagem-link"></center>
             </div>
           </div>
         
           <div class="carousel-item" style="background-color: #108F8A">
-            <div>
-              <center><a href="http://webgente.jacobina.genteufv.com.br/"><img src="/img/sroom/jacobina.png" class="img1"></a></center>
+            <div class="container-imagem-projeto">
+              <center><img src="/img/sroom/jacobina.png" class="imagem-projeto"></center>
               <center><img src="/img/sroom/girar.png" class="girarimg is-animating"></center>
+              <center><img src="/img/sroom/imglink.png" data-url="https://webgente.jacobina.genteufv.com.br" class="imagem-link"></center>
             </div>        
           </div>
 
 
           <div class="carousel-item" style="background-color: #856A35">
-            <div>
-              <center><a href="https://webgente.cmd.genteufv.com.br/"><img src="/img/sroom/cmd.png" class="img1"></a></center>
+            <div class="container-imagem-projeto">
+              <center><img src="/img/sroom/cmd.png" class="imagem-projeto"></center>
               <center><img src="/img/sroom/girar.png" class="girarimg is-animating"></center>
+              <center><img src="/img/sroom/imglink.png" data-url="https://webgente.cmd.genteufv.com.br" class="imagem-link"></center>
             </div>
           </div>
 
           <div class="carousel-item" style="background-color: #4F8C14">
-            <div>
-              <center><a href="http://webgente.ufv.genteufv.com.br/"><img src="/img/sroom/ufv.png" class="img1"></a></center>
+            <div class="container-imagem-projeto">
+              <center><img src="/img/sroom/ufv.png" class="imagem-projeto"></center>
               <center><img src="/img/sroom/girar.png" class="girarimg is-animating"></center>
+              <center><img src="/img/sroom/imglink.png" data-url="https://webgente.ufv.genteufv.com.br" class="imagem-link"></center>
             </div>
           </div>
 
+          <!--
           <div class="carousel-item" style="background-color: #433085">
             <div>
-              <center><a><img src="/img/sroom/gianetti.png" class="img1"></a></center>
+              <center><img src="/img/sroom/gianetti.png" class="imagem-projeto"></center>
               <center><img src="/img/sroom/girar.png" class="girarimg is-animating"></center>
+              <center><img src="/img/sroom/imglink.png" data-url="https://webgente.bomdespacho.mg.gov.br" class="imagem-link"></center>
             </div>
           </div>
+          -->
 
       
         </div>
@@ -166,10 +183,10 @@
 
             <div class="row align-items-center">
                 <div class="col align-items-center">
-                  <center><a><img src="/img/doc/git.png" id="imgdoc"></a></center>
+                  <center><img src="/img/doc/git.png" id="imggit" class="doc-button"></center>
                 </div>
                 <div class="col align-items-center">
-                  <center><a><img src="/img/doc/docs.png" id="imgdoc"></a></center>
+                  <center><img src="/img/doc/docs.png" id="imgdoc" class="doc-button"></center>
                 </div>
             </div>
 
@@ -179,11 +196,42 @@
 
     </div>
 
-    <!-- FIM DA PÁGINA DE DOCUMENTAÇÃO -->
-
-     
+    <!-- FIM DA PÁGINA DE DOCUMENTAÇÃO -->     
 </body>
 
 <%- include ("partials/footer.ejs"); %>
+
+<script>
+
+  function fadeAndLinkShowroom() { // Controla o hover no centro do carousel e a criação de links para os projetos
+
+    $(".imagem-link")
+    .mouseenter( () => {
+      $(".imagem-link").fadeTo('1s',1)
+    } )
+    .mouseleave( () => {
+      $(".imagem-link").fadeTo('1s',0)
+    } )
+
+    $(".imagem-link").each((i,obj) => {
+      $(obj).click(() => {
+        window.open(obj.dataset.url,'_blank')
+      })
+    })
+  }
+
+  fadeAndLinkShowroom();
+
+  // Adicionando links do repositório e da documentação via jQuery
+
+  $('#imggit').click(() => {
+    window.open('https://github.com/paschendale/webgente-node','_blank')
+  })
+
+  $('#imgdoc').click(() => {
+    window.open('https://webgente.docs.genteufv.com.br','_blank')
+  })
+
+</script>
 
 <!-- Modais -->
