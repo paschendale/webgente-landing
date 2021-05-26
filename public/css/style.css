@@ -252,6 +252,27 @@ th {
    border:none;
 }
 
+/*--- Botão para avançar do mapa para o showroom --*/
+
+#arrow-down {
+   padding-bottom: 5vh;   
+   left: 50%;
+   transform: translateX(-50%);
+   pointer-events: all;
+   filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.4));
+   display: none;
+}
+
+#arrow-down:hover {
+   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+   #arrow-down {display: block;}
+   
+   }
+
 /*------------------------------------------------*/
 
 /* SHOWROOM - CAROUSEL */
@@ -259,7 +280,6 @@ th {
 .carousel-inner{ 
 	list-style: none; /* aqui tiro a opção de passar SLIDEs < >  */
 	position: relative!important;
-
 	top: 0;
 	left: 0;
 }
