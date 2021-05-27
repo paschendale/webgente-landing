@@ -34,7 +34,7 @@ L.control.scale(optionsScale).addTo(map);
 
 /* TODO: Mudar a imagem carregada de acordo com o tipo de dispositivo */
 var image = L.imageOverlay('/img/mapbackground4.jpg',bounds).addTo(map);
-var image2 = L.imageOverlay('/img/mapbackground4.jpg',bounds);
+var image2 = L.imageOverlay('',bounds);
 
 map.fitBounds(boundsToShow);
 
@@ -58,9 +58,9 @@ var optionsControl = {
 
 Lc = L.control.groupedLayers(baseMaps,overlayMaps,optionsControl).addTo(map);
 
-/* Adicionando marker de tour completo ao sistema */
+/* Adicionando marker de tour completo ao sistema 
 
-var fullTour = L.marker([2198, 1776]).addTo(map);
+var fullTour = L.marker([2198, 1776]).addTo(map); */
 
 /* Adicionando marker com popup do getFeatureInfo */
 
@@ -143,3 +143,7 @@ $('.leaflet-control-layers-toggle').click(() => {
     createVideoModal('Q3dvbM6Pias')
 });
 
+// Full tour
+$('#tour-hover').click(() => {
+    createVideoModal('ad_iwSaFDLM')
+});

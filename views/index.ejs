@@ -74,7 +74,7 @@
               <img src="/img/titulo-site.jpg"  class="leaflet-top" id="imagem-inicial">
             </div>
             <div>
-              <img src="/img/tour-site.png"  class="leaflet-top" id="tour-inicial">  
+              <img src="/img/tour-site.png"  class="leaflet-top is-animating" id="tour-inicial">  
             </div>
             <div>
               <img src="/img/tour-hover.png"  class="leaflet-top" id="tour-hover">  
@@ -195,20 +195,29 @@
 
             <div class="row align-items-center">
                 <div class="col align-items-center">
+                  <center><h3 class="text-doc">Repositório Oficial</h3></center>
+                  <br>
                   <center><img src="/img/doc/git.png" id="imggit" class="doc-button"></center>
                 </div>
                 <div class="col align-items-center">
-                  <center><img src="/img/doc/docs.png" id="imgdoc" class="doc-button"></center>
+                  <center><h3 class="text-doc">Documentação do Sistema</h3></center>
+                  <br>
+                  <center><img src="/img/doc/docs.png" id="imgdoc" class="doc-button"></center>                 
                 </div>
             </div>
-
-        </div>
-
-
-
+        </div>      
     </div>
 
     <!-- FIM DA PÁGINA DE DOCUMENTAÇÃO -->     
+    <footer class="bg-light text-center text-lg-start">
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright:
+        <a class="text-dark" href="https://www.ufv.br/">Universidade Federal de Viçosa</a> & 
+        <a class="text-dark" href="https://github.com/paschendale/">Victor Marotta</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
 </body>
 
 <%- include ("partials/footer.ejs"); %>

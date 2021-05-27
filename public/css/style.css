@@ -309,7 +309,18 @@ th {
    left:50%;
    margin-top:6.6%;
    margin-left:-3.5%;
+   pointer-events: all;
+}
 
+#tour-inicial.is-animating {
+   animation: spinning 30s linear infinite;
+
+}
+
+#tour-hover:hover {
+   transform: scale(1.1);
+   transition: all 0.3s;
+   cursor: pointer;
 }
 
 @media (max-width: 565px) {
@@ -476,6 +487,9 @@ th {
    transform: scale(1.1);
 }
 
+.text-doc {
+   color: white;
+}
 
 /* Estilo do Modal de Documentação */
 
