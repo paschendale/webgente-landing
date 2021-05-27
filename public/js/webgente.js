@@ -33,8 +33,8 @@ var optionsScale = {
 L.control.scale(optionsScale).addTo(map);
 
 /* TODO: Mudar a imagem carregada de acordo com o tipo de dispositivo */
-var image = L.imageOverlay('/img/mapbackground3.jpg',bounds).addTo(map);
-var image2 = L.imageOverlay('/img/mapbackground3.jpg',bounds);
+var image = L.imageOverlay('/img/mapbackground4.jpg',bounds).addTo(map);
+var image2 = L.imageOverlay('/img/mapbackground4.jpg',bounds);
 
 map.fitBounds(boundsToShow);
 

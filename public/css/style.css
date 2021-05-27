@@ -8,6 +8,15 @@ html, body {
    scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+   width: 8px;
+}
+ 
+::-webkit-scrollbar-thumb {
+   -webkit-border-radius: 10px;
+   border-radius: 10px;
+   background: #6c757d; 
+}
 
 
 /*------------------------------------------------*/
@@ -271,7 +280,70 @@ th {
 
    #arrow-down {display: block;}
    
+}
+
+#imagem-inicial {
+   width: 30%;
+   position:absolute;
+   top:50%;
+   left:50%;
+   margin-top:-13.5%;
+   margin-left:-15%;
+
+}
+
+#tour-inicial {
+   width: 10%;
+   position: absolute;
+   top:50%;
+   left:50%;
+   margin-top:5%;
+   margin-left:-5%;
+
+}
+
+#tour-hover {
+   width: 7%;
+   position: absolute;
+   top:50%;
+   left:50%;
+   margin-top:6.6%;
+   margin-left:-3.5%;
+
+}
+
+@media (max-width: 565px) {
+
+   #imagem-inicial{
+      width: 60%;
+      position:absolute;
+      top:50%;
+      left:50%;
+      margin-top:-25%;
+      margin-left:-30%;
+   
    }
+
+   #tour-inicial {
+      width: 20%;
+      position: absolute;
+      top:50%;
+      left:50%;
+      margin-top:10%;
+      margin-left:-10%;
+   
+   }
+
+   #tour-hover {
+      width: 15%;
+      position: absolute;
+      top:50%;
+      left:50%;
+      margin-top:12.8%;
+      margin-left:-7.5%;
+   
+   }
+}
 
 /*------------------------------------------------*/
 
@@ -354,6 +426,16 @@ th {
    
    }
 
+   .imagem-link{
+      width: 60%;
+      position:absolute;
+      top:50%;
+      left:50%;
+      margin-top:-25%;
+      margin-left:-30%;
+   
+   }
+
    .girarimg {
 
       width: 70%;
@@ -374,12 +456,6 @@ th {
 
 
 /* DOCUMENTAÇÃO */
-
-.btn-doc {
-   height: 100px;
-   width: 100px;
-   border-radius: 50px;
-}
 
 .box4 {
    position: relative;
@@ -420,15 +496,32 @@ iframe {
    left:50%;
 }
 
+#imggit{
+   
+   margin-top: 10%;
+   width: 70%;
+   top:50%;
+   left:50%;
+}
+
 @media (max-width: 565px) {
 
    #imgdoc{
       
-      margin-top: 70px;
+
+      margin-bottom: 30%;
       width: 150px;
       top:50%;
       left:50%;
    }
    
+   #imggit{
+      
+
+      margin-bottom: 30%;
+      width: 150px;
+      top:50%;
+      left:50%;
+   }
 
 }
