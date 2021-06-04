@@ -41,13 +41,7 @@
 
       </div>
 
-          <!-- Botões -->
-          <!-- Apenas em telas menores -->
-      <div class="ml-auto">
-          <button type="button" class="btn btn-secondary btn-sm btnnav2" data-toggle="modal" data-target="#exampleModalLong" ><span class="far fa-question-circle"></span></button>
-          &nbsp;
-          <button class="btn btn-secondary btn-sm btnnav2" type="button" id="enviar" ><span class="fas fa-user-lock"></span></button>
-      </div>
+          
 
 
     </nav>
@@ -66,7 +60,12 @@
 
         <div id="map">
             <div id="search" class="container col-3 col-sm-4 col-lg-4 leaflet-top leaflet-left webgente-search-container"></div>
-            <div id='webgente-legend-container' class='leaflet-bottom leaflet-right webgente-legend-container shadow p-3'></div>
+            <div id='webgente-legend-container' class='leaflet-bottom leaflet-right webgente-legend-container shadow p-3' style="pointer-events: all;">
+              <div id='webgente-legend-graphic-container' class='webgente-legend-graphic-container'>
+                <p class='webgente-legend-layer-title'>Legenda</p>
+                <center><img src="http://localhost:3010/css/leaflet/images/marker-icon.png" style="height:20px;"></center>
+              </div>
+            </div>
             <div id='webgente-coordinates-panel' class="webgente-coordinates-panel leaflet-bottom leaflet-left">
                 <div id='webgente-coordinates-container' class="webgente-coordinates-container"></div>
             </div>

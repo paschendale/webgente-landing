@@ -10,8 +10,28 @@ var map = L.map('map', {
     minZoom: -2,
     zoomSnap: 0.25,
     maxBounds: bounds,
-    scrollWheelZoom: false
+    scrollWheelZoom: false,
+    zoomControl: false
 });
+
+/* Adicionando botões de login e depois zoom */
+
+var login = L.easyButton({
+    id: 'webgente-login',
+    position: 'topleft',
+    states: [
+        {
+            stateName: 'login',
+            onClick: () => {
+                
+            },
+            title: 'Acesso às interfaces restritas',
+            icon: 'fas fa-user-lock'
+        }
+    ]
+}).addTo(map)
+
+L.control.zoom().addTo(map);
 
 /* dando resize no mapa pra ficar abaixo da navbar */
 $('#map').height(window.innerHeight-$('#navbar-webgente').height()-10)
@@ -78,25 +98,73 @@ if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini
 /* Inicializando botões de ferramentas */
 
 // Adicionando botão de set view para visao inicial
-var home = L.easyButton('<img src="img/home.png">',function(btn, map){ map.fitBounds(boundsToShow); }).addTo(map);
+var home = L.easyButton('<img id="home-button-image" src="img/home.png">',function(btn, map){ map.fitBounds(boundsToShow); }).addTo(map);
 
 // Adiciona o botao de seleção de feições
-var selectButton = L.easyButton('fas fa-hand-pointer',function(btn, map){ map.fitBounds(boundsToShow); }).addTo(map);
+var selectButton = L.easyButton('<span id="selectButton" class="fas fa-hand-pointer"></span>',function(btn, map){ map.fitBounds(boundsToShow); });
 
 // Adiciona o botao de visualizar informacoes com dois estados
-var infoButton = L.easyButton('<img src="img/info_enabled.png">',function(btn, map){ map.fitBounds(boundsToShow); }).addTo(map);
+var infoButton = L.easyButton('<img id="infoButton" src="img/info_enabled.png">',function(btn, map){ map.fitBounds(boundsToShow); });
 
 // Adiciona botao para ativar a ferramenta de pesquisas
-var searchButton = L.easyButton('<img src="/img/search_disabled.png">',function(btn, map){ map.fitBounds(boundsToShow); }).addTo(map);
+var searchButton = L.easyButton('<img src="/img/search_disabled.png">',function(btn, map){ map.fitBounds(boundsToShow); });
 
 // Adiciona botão para habilitar ou desabilitar a legenda
-var legendButton = L.easyButton('<img src="img/legend_disabled.png">',function(btn, map){ map.fitBounds(boundsToShow); }).addTo(map);
+var legendButton = L.easyButton('<img id="legendButton" src="img/legend_disabled.png">',function(btn, map){ map.fitBounds(boundsToShow); });
 
 /* Geolocalização */
-var geolocationButton = L.easyButton('fas fa-map-marker-alt',function(btn, map){ map.fitBounds(boundsToShow); }).addTo(map);
+var geolocationButton = L.easyButton('fas fa-map-marker-alt',function(btn, map){ map.fitBounds(boundsToShow); });
 
 // Adiciona botão para habilitar ou desabilitar ferramentas de medição
-var measurementButton = L.easyButton('fas fa-ruler',function(btn, map){ map.fitBounds(boundsToShow); }).addTo(map);
+var measurementButton = L.easyButton({
+    id: 'measurementButton',
+    states: [{
+                stateName: 'measurement_enabled',   
+                icon:      'fas fa-ruler',               
+                title:     'Clique para abrir as ferramentas de medição de distâncias e áreas',
+                onClick: function(btn) {
+                    measurementButton.state('measurement_disabled');
+                    btn.state('measurement_disabled');
+                    document.getElementsByClassName('leaflet-draw-toolbar')[0].style.visibility = 'visible'
+                }
+            }, {
+                stateName: 'measurement_disabled',
+                icon:      'fas fa-ruler',
+                title:     'Desabilita as ferramentas de medição',   
+                onClick: function(btn) {       
+                    measurementButton.state('measurement_enabled');
+                    btn.state('measurement_enabled');
+                    document.getElementsByClassName('leaflet-draw-toolbar')[0].style.visibility = 'hidden'
+                }
+        }]
+    });
+
+// Adiciona botão de ajuda
+var help = L.easyButton({
+    id: 'webgente-help',
+    position: 'bottomleft',
+    states: [
+        {
+            stateName: 'help',
+            onClick: () => {},
+            title: 'Me ajuda!',
+            icon: 'fas fa-question'
+        }
+    ]
+}).addTo(map)
+
+/* Adiciona a barra de ferramentas com os botões definidos */
+
+var buttonsBar = [
+    selectButton,
+    infoButton,
+    searchButton,
+    legendButton,
+    geolocationButton,
+    measurementButton
+]
+
+L.easyBar(buttonsBar).addTo(map);
 
 // Coordenadas
 map.on("mousemove",function (e) {
@@ -130,20 +198,62 @@ function createVideoModal (link) {
 
 }
 
+/* Verificação de dispositivo mobile */
+
+function detectMob() {
+    return ( window.innerWidth <= 800 );
+  }
+
 /* Bindando links do Youtube às ferramentas */
 /* Copiar código após o watch?v= para entrada na função */
-
-// Ferramentas de coordenadas
-$('#webgente-coordinates-container').click(() => {
-    createVideoModal('ad_iwSaFDLM')
-});
-
-//Controle de camadas
-$('.leaflet-control-layers-toggle').click(() => {
-    createVideoModal('Q3dvbM6Pias')
-});
 
 // Full tour
 $('#tour-hover').click(() => {
     createVideoModal('ad_iwSaFDLM')
 });
+
+// Botão home
+$('#home-button-image').click(() => {
+    createVideoModal('Opfb6qOK_G8')
+});
+
+//Controle de camadas
+$('.leaflet-control-layers-toggle').click(() => {
+    if (detectMob()) {
+        createVideoModal('5uW53JEqYfQ') // Video para mobile
+    } else {
+        createVideoModal('Mu2FXaPHFpc') // Video para desktop
+    }
+});
+
+// Legendas Dinamicas
+$('#webgente-legend-container').click(() => {
+    createVideoModal('GhhgbrI6_3c')
+});
+$('#legendButton').click(() => {
+    createVideoModal('GhhgbrI6_3c')
+});
+
+// Ferramentas de Medição
+$('#measurementButton').click(() => {
+    // Medição de área
+    $('.leaflet-draw-draw-polygon').click(() => {
+        createVideoModal('KKJhmYCY_k4')
+    });
+
+    // Medição de Distância
+    $('.leaflet-draw-draw-polyline').click(() => {
+        createVideoModal('bCO42vBf41U')
+    });
+});
+
+// Seleção de feições
+$('#selectButton').click(() => {
+    createVideoModal('lpq1GR8DNHE')
+});
+
+// Visualização de atributos
+$('#infoButton').click(() => {
+    createVideoModal('QulUyuix4Qw')
+});
+
