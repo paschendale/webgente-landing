@@ -209,7 +209,7 @@ function detectMob() {
 
 // Full tour
 $('#tour-hover').click(() => {
-    createVideoModal('ad_iwSaFDLM')
+    window.open('https://www.youtube.com/playlist?list=PL7IoZ1L8coKNptsmo9JCXuX2h-R3UhaHF','_blank')
 });
 
 // Botão home
