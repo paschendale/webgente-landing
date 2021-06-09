@@ -573,3 +573,19 @@ iframe {
    }
 
 }
+
+/* ----------------------------------------- */
+
+/* Feed de notícias */
+
+.card {
+}
+
+h5 {
+
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 500;
+   line-height: 1em;
+   color: rgb(0, 0, 0);
+
+}

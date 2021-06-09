@@ -36,6 +36,12 @@
               <a class="nav-link text-light" href="#documentacao"> Documentação </a>
             </li>
 
+            <li class="nav-item divisor"></li>
+
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#news"> Blog </a>
+            </li>
+
 
           </ul>
 
@@ -49,11 +55,6 @@
     </div>
 
     <!-- FIM DA NAVBAR -->
-
-
-
-
-
 
     <!-- PÁGINA DO WEBGENTE -->
     <div id="webgente">
@@ -86,13 +87,6 @@
 
     </div>
     <!-- FIM DA PÁGINA DO WEBGENTE -->
-
-
-
-
-
-
-
 
     <!-- PÁGINA DE SHOWROOM -->
 
@@ -181,10 +175,6 @@
 
     <!-- FIM DA PÁGINA DE SHOWROOM -->
 
-
-    
-
-
     <!-- PÁGINA DE DOCUMENTAÇÃO -->
     
     <div id="documentacao">
@@ -208,6 +198,17 @@
     </div>
 
     <!-- FIM DA PÁGINA DE DOCUMENTAÇÃO -->     
+
+    <div id="news">
+      <div class="container">
+        <div class="feed-blog">
+          <center><h3 style="color: white;">Últimas novidades do WebGENTE:</h3></center>
+          <hr>
+          <div class="row" id="feed-blog-container"></div>
+        </div>
+      </div>
+    </div>
+
     <footer class="bg-light text-center text-lg-start">
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
@@ -252,6 +253,55 @@
   $('#imgdoc').click(() => {
     window.open('https://webgente.docs.genteufv.com.br','_blank')
   })
+
+  /* Alimentação do Feed de Notícias */
+
+  var feedURL = 'https://genteufv.com.br/blog/index.php/category/webgente/feed'
+  
+  $.get({
+    url: 'https://api.rss2json.com/v1/api.json?rss_url=' + feedURL + '&api_key=1ncqy9amuykfdf0xd8soe1xdxzyjntvk96dnd5j7',
+    success: (data) => {
+      console.log('https://api.rss2json.com/v1/api.json?rss_url=' + feedURL + '&api_key=1ncqy9amuykfdf0xd8soe1xdxzyjntvk96dnd5j7')
+      console.log(data)
+      for(i=0;i<data.items.length;i++) {
+        if(i==4){
+          break;
+        }
+        $('#feed-blog-container').append(feedCardHTML(data.items[i]))
+      }
+    }
+  });
+
+  function feedCardHTML(entry) {
+
+    if(entry.thumbnail == undefined || entry.thumbnail == ''){
+      entry.thumbnail = './img/Aplicacao_Exemplo2.png'
+    }
+
+    date = new Date(entry.pubDate)
+
+    date = date.getDay() + ' de ' + date.toLocaleString('default', { month: 'long' }) + ' de ' + date.getFullYear()
+
+    return '<div class="col"><div class="card"><img class="card-img-top img-fluid" src="'+entry.thumbnail+'" alt="Card image cap"><div class="card-body"><h5 class="card-title">'+entry.title+'</h5><h6 class="card-subtitle text-muted">'+date+'</h6><hr><div class="card-text">'+entry.description+'</div><a href="'+entry.link+'" target="_blank" class="btn btn-dark">Veja mais</a></div></div></div>'
+  }
+
+  function resizeCardText() {
+
+    card = document.getElementsByClassName('card')
+    card_text = document.getElementsByClassName('card-text')
+
+    function cutCardText(card) {
+      card.text().substring(0,card.text().length-1)
+    }
+
+    for (i = 0; i < card_text.length; i++) {
+      console.log('resized card ' + i)
+      while ($(card[i]).innerHeight > window.innerHeight*0.8) {
+        cutCardText($(card_text[i]))
+      }     
+    }   
+  }
+
 
 </script>
 
