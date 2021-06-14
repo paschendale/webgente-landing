@@ -6,10 +6,8 @@
 
     <div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark navbarwebgente fixed-top" id="navbar-webgente">
+    <nav class="navbar navbar-expand-sm navbar-dark navbarwebgente fixed-top" id="navbar-webgente">
 
-      <!-- Logo do webgente -->
-      <a class="navbar-brand" href="/"><img src="img/webgente-fundo-escuro-120x40.png" alt=""></a>
       
       <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars text-light"></i>
@@ -60,6 +58,11 @@
     <div id="webgente">
 
         <div id="map">
+          <div id="logo" class="leaflet-top leaflet-left webgente-logo">
+            <img src="img/webgente-fundo-escuro-120x40.png" alt="Logo do WebGENTE">
+
+            </div>
+            
             <div id="search" class="container col-3 col-sm-4 col-lg-4 leaflet-top leaflet-left webgente-search-container"></div>
             <div id='webgente-legend-container' class='leaflet-bottom leaflet-right webgente-legend-container shadow p-3' style="pointer-events: all;">
               <div id='webgente-legend-graphic-container' class='webgente-legend-graphic-container'>
@@ -197,11 +200,14 @@
         </div>      
     </div>
 
-    <!-- FIM DA PÁGINA DE DOCUMENTAÇÃO -->     
+    <!-- FIM DA PÁGINA DE DOCUMENTAÇÃO --> 
+    
+    <!-- PÁGINA DE NOTÍCIAS-->
 
-    <div id="news">
+    <div id="news" style="background-image: linear-gradient(rgb(0, 0, 0),rgb(2, 17, 29));">
       <div class="container">
         <div class="feed-blog">
+          <br>
           <center><h3 style="color: white;">Últimas novidades do WebGENTE:</h3></center>
           <hr>
           <div class="row" id="feed-blog-container"></div>
@@ -209,9 +215,12 @@
       </div>
     </div>
 
+    <!-- FIM DA PÁGINA DE NOTÍCIAS-->
+
+    
     <footer class="bg-light text-center text-lg-start">
       <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      <div class="text-center p-3" style="background-color: rgb(0, 0, 0);">
         © 2021 Copyright:
         <a class="text-dark" href="https://www.ufv.br/">Universidade Federal de Viçosa</a> & 
         <a class="text-dark" href="https://github.com/paschendale/">Victor Marotta</a>
