@@ -257,3 +257,7 @@ $('#infoButton').click(() => {
     createVideoModal('QulUyuix4Qw')
 });
 
+// Controles de Zoom
+$('.leaflet-control-zoom-in,.leaflet-control-zoom-out').click(() => {
+    createVideoModal('LtfaHUeJopc')
+})
